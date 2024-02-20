@@ -7,7 +7,7 @@ import com.example.bootcampodev5.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var islem = ""
+    private var islem = "0"
     private var sonuc = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,13 +65,13 @@ class MainActivity : AppCompatActivity() {
         }
         binding.buttonEqual.setOnClickListener {
             if (islem == ""){
-                binding.textViewSonuc.text = "0"
+                binding.textViewSonuc.text = "0" //hiçbir sayı girilmedem eşittir tuşşuna basılırsa
             }else {
                 sonuc = islem.split("+").sumOf {
                     it.toInt()
                 }
                 binding.textViewSonuc.text = "$sonuc"
-                islem = sonuc.toString()
+                islem = sonuc.toString() // eşittirden sonra oluşan sonuç kullanılmak istenirse
             }
         }
     }
