@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.buttonEqual.setOnClickListener {
             if (islem == ""){
-                binding.textViewSonuc.text = "0" //hiçbir sayı girilmedem eşittir tuşşuna basılırsa
+                binding.textViewSonuc.text = "0" //hiçbir sayı girilmedem eşittir tuşuna basılırsa
             }else {
                 sonuc = islem.split("+").sumOf {
                     it.toInt()
